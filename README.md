@@ -3,7 +3,7 @@ Angry Planets
 
 Our goal is to help children learn about the effects of gravity, and the planets and moons, through a visual game.
 
-The game allows children to see what exactly how planets and bodies interact with each other when gravity is taken into consideration:
+The game allows children to see what exactly happens when planets and bodies interact with each other when gravity is taken into consideration:
 - when a planet of the correct gravity is inserted into the space, the moons orbit normally. As a congratulatory message, the sun glows bright.
 - when a planet with too much gravity is inserted, the moons crash into the planet.
 - when a planet with too little gravity is inserted, the moons fly off into space because there's not enough pull.
