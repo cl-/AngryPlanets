@@ -11,4 +11,8 @@ The game allows children to see what exactly how planets and bodies interact wit
 The other goal would be for scientists to be able to easily teach new content, by making it easy for them to create new stages for new planets and revolving bodies through simply submitting a text file input of raw data.
 
 
+==============
+What we used:
+- HTML5
+- Javascript
 
