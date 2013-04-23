@@ -17,5 +17,5 @@ What we used:
 - Javascript with Fabric
 - Safari browser
 
-Please run the code on Safari browser.
+NOTE: Please run the code on Safari browser.
 When you run the code offline, it doesn't work well with some versions of Chrome.
