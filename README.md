@@ -14,5 +14,8 @@ The other goal would be for scientists to be able to easily teach new content, b
 ==============
 What we used:
 - HTML5
-- Javascript
+- Javascript with Fabric
+- Safari browser
 
+Please run the code on Safari browser.
+When you run the code offline, it doesn't work well with some versions of Chrome.
