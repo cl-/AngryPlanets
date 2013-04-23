@@ -227,12 +227,12 @@ canvas.on({
 					setTimeout(function () {
 						var myVideo=document.getElementById("video2");
 						myVideo.style.visibility="visible";
-						myVideo.width = 1024;
+						myVideo.width = 320;
 						myVideo.play();
 						snd_explode.play();
 						setTimeout(function () {
 							document.location.reload(true);
-						},3000);
+						},5000);
 					},2000);
 			}
 			else {
@@ -251,7 +251,7 @@ canvas.on({
 						snd_explode.play();
 						setTimeout(function () {
 							document.location.reload(true);
-						},3000);
+						},5000);
 					},2000);
 
 				}
@@ -262,7 +262,7 @@ canvas.on({
 					}
 					setTimeout(function () {
 						document.location.reload(true);
-					},3000);
+					},5000);
 				}
 				text.setText("It should be "+planetNames[planet]+"!");
 				text.animate('opacity', 1, {
