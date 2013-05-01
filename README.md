@@ -27,7 +27,7 @@ The game allows children to see what exactly happens and how planets and bodies 
 
 On top of showing the gravitational phenomenon that happens as a result of the planet chosen, the game also provides the explanation behind the phenomenon.
 
-Our second goal is to allow scientists to easily teach new content, by making it easy for them to create new stages for new planets and revolving bodies through simply submitting a simple json file.
+Our second goal is to allow scientists to easily teach new content, by making it easy for them to create new stages for new planets and revolving bodies through simply submitting just a json file.
 
 To submit your customized json file to create new stages, it is easily done via a URL-extension to our original URL (the method is mentioned below). In that json file, you simply need to provide the list of planet names, planet images, moon counts, and planet masses in the specified json format detailed below.
 
@@ -72,7 +72,7 @@ What we used:
 Further technical details can be found on the code page: https://github.com/cl-/AngryPlanets
 
 
-How to customize the solar system game data:
+The API - How to customize the solar system game data:
 ---------------
 If you are a scientist or teacher trying to customize the game, here's how you can do it.
 
