@@ -20,6 +20,12 @@ var canvas = new fabric.Canvas('c', {
 	selection: false
 });
 
+var canvasAnswer = new fabric.Canvas('a', {
+	hoverCursor: 'pointer',
+	selection: false
+});
+
+
 var sunObj = fabric.Image.fromURL('img/sun.png', function(obj) {
 	canvas.add(obj);
 	obj.set({left:0,top:100});
@@ -132,9 +138,48 @@ addMoon = function (i) {
 			canvas.renderAll();
 	});
 };
-for (var i = numMoons; i > 0; i--) {
+
+//## Improved display
+function numMoonsToDisplay(numMoons){
+	return (numMoons<30)? numMoons:30;
+}//## end of improvements part1
+
+for (var i = numMoonsToDisplay(numMoons); i > 0; i--) {
 	addMoon(i);
 }
+
+
+//##2 Improved instructions
+var moonCountDisplay = new fabric.Text("This planet has "+numMoons+" moons.", {
+	left:1024/2.0,
+	top:768/4.0*0.5-40,
+	fontSize: 60,
+	lineHeight: 1,
+	originX: 'center',
+	originY: 'center',
+	fontFamily: 'Helvetica',
+	fontWeight: 'bold'
+});
+moonCountDisplay.setColor("white");
+moonCountDisplay.opacity = 100;
+canvas.add(moonCountDisplay);
+
+var dropInstructions = new fabric.Text("Instructions: Drag and drop the correct planet into the center.", {
+	left:1024/2.0,
+	top:768/4.0*0.8-40,
+	fontSize: 60,
+	lineHeight: 1,
+	originX: 'center',
+	originY: 'center',
+	fontFamily: 'Helvetica',
+	fontWeight: 'bold',
+	fontSize: 28,
+});
+dropInstructions.setColor("white");
+dropInstructions.opacity = 100;
+canvas.add(dropInstructions);
+//## end of improvements part2
+
 
 var text = new fabric.Text("Congratulations!", {
 	left:1024/2.0,
@@ -149,6 +194,78 @@ var text = new fabric.Text("Congratulations!", {
 text.setColor("white");
 text.opacity = 0;
 canvas.add(text);
+
+//## Improved instructions part 3
+//TEMP VARIABLES: planetNames[planet]
+var storyCorrect = new fabric.Text(planetNames[planet]+" in its correct place and the \nsolar system is back in balance. Hurray!!", {
+	left:1024/2.0,
+	top:768/4.0*3-40,
+	fontSize: 60,
+	lineHeight: 1.25,
+	originX: 'center',
+	originY: 'center',
+	fontFamily: 'Helvetica',
+	fontWeight: 'bold',
+	fontSize: 25,
+});
+storyCorrect.setColor("white");
+storyCorrect.opacity = 0;
+canvas.add(storyCorrect);
+//canvasAnswer.add(storyCorrect);
+
+var reasonCorrect = new fabric.Text(planetNames[planet]+" has just the \nRIGHT mass of "+"OVER_9000"+". \n\nHence it is able to create \njust the RIGHT amount of \ngravitational pull to keep \nthe moons in its orbit.", {
+	left:1024/2.0*1.55,
+	top:768/4.0*2.15-40,
+	fontSize: 60,
+	lineHeight: 1.25,
+	originX: 'center',
+	originY: 'center',
+	fontFamily: 'Helvetica',
+	fontWeight: 'bold',
+	fontSize: 25,
+});
+reasonCorrect.setColor("white");
+reasonCorrect.opacity = 0;
+canvas.add(reasonCorrect);
+//canvasAnswer.add(reasonCorrect);
+
+var reasonCollision = new fabric.Text("The moons crash into "+"planet_NAME"+" \nas "+"planet_NAME"+" has a GREATER \ngravitational pull than "+planetNames[planet]+".", {
+	left:1024/2.0*1.55,
+	top:768/4.0*2.15-40,
+	fontSize: 60,
+	lineHeight: 1.25,
+	originX: 'center',
+	originY: 'center',
+	fontFamily: 'Helvetica',
+	fontWeight: 'bold',
+	fontSize: 25,
+});
+reasonCollision.setColor("white");
+reasonCollision.opacity = 0;
+canvas.add(reasonCollision);
+//canvasAnswer.add(reasonCollision);
+
+var reasonFlyOff = new fabric.Text("The moons drift off into outer space \nas "+"planet_NAME"+" has a SMALLER \ngravitational pull than "+planetNames[planet]+". \n\nHence it does not have enough pull \nto keep the moons in its orbit.", {
+	left:1024/2.0*1.55,
+	top:768/4.0*2.15-40,
+	fontSize: 60,
+	lineHeight: 1.25,
+	originX: 'center',
+	originY: 'center',
+	fontFamily: 'Helvetica',
+	fontWeight: 'bold',
+	fontSize: 25,
+});
+reasonFlyOff.setColor("white");
+reasonFlyOff.opacity = 0;
+canvas.add(reasonFlyOff);
+//canvasAnswer.add(reasonFlyOff);
+
+//canvasAnswer.renderAll();
+
+
+
+
 
 canvas.on({
 	'object:moving': function(e) {
@@ -186,7 +303,19 @@ canvas.on({
 		}
 		else {
 			console.log("inside");
-			// hide circle
+			// hide Instructions and the Drop circle #####
+			moonCountDisplay.animate('opacity', 0, {
+				duration: 500,
+				onChange: canvas.renderAll.bind(canvas),
+				onComplete: function() {
+				}
+			});
+			dropInstructions.animate('opacity', 0, {
+				duration: 500,
+				onChange: canvas.renderAll.bind(canvas),
+				onComplete: function() {
+				}
+			});
 			circleObject.animate('opacity', 0, {
 				duration: 500,
 				onChange: canvas.renderAll.bind(canvas),
@@ -224,16 +353,44 @@ canvas.on({
 					onComplete: function() {
 					}
 				});
+				// show the Reasoning #####
+				reasonCorrect.animate('opacity', 1, {
+					duration: 500,
+					onChange: canvas.renderAll.bind(canvas),
+					onComplete: function() {
+					}
+				});
 					setTimeout(function () {
 						var myVideo=document.getElementById("video2");
 						myVideo.style.visibility="visible";
 						myVideo.width = 320;
 						myVideo.play();
 						snd_explode.play();
+						
+						// show the Storyline about the Balance of the Solar System #####
+						text.animate('opacity', 0, {
+							duration: 500,
+							onChange: canvas.renderAll.bind(canvas),
+							onComplete: function() {
+							}
+						});
+						reasonCorrect.animate('opacity', 0, {
+							duration: 500,
+							onChange: canvas.renderAll.bind(canvas),
+							onComplete: function() {
+							}
+						});
+						storyCorrect.animate('opacity', 1, {
+							duration: 500,
+							onChange: canvas.renderAll.bind(canvas),
+							onComplete: function() {
+							}
+						});
+
 						setTimeout(function () {
 							document.location.reload(true);
 						},5000);
-					},2000);
+					},3000); //CHANGED DURATION from 2,000 to 3,000 because need more time to read reasoning. ###
 			}
 			else {
 				// check larger or smaller
@@ -242,6 +399,13 @@ canvas.on({
 						moon = moons[i];
 						moon.state = MoonState.Falling;
 					}
+					reasonCollision.animate('opacity', 1, {
+						duration: 500,
+						onChange: canvas.renderAll.bind(canvas),
+						onComplete: function() {
+						}
+					});
+					
 
 					setTimeout(function () {
 						var myVideo=document.getElementById("video1");
@@ -260,9 +424,15 @@ canvas.on({
 						moon = moons[i];
 						moon.state = MoonState.Drifting;
 					}
+					reasonFlyOff.animate('opacity', 1, {
+						duration: 500,
+						onChange: canvas.renderAll.bind(canvas),
+						onComplete: function() {
+						}
+					});
 					setTimeout(function () {
 						document.location.reload(true);
-					},5000);
+					},8000); //CHANGED DURATION from 5,000 to 8,000 because the correct answer text is longer. ###
 				}
 				text.setText("It should be "+planetNames[planet]+"!");
 				text.animate('opacity', 1, {
