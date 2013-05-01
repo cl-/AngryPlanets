@@ -37,7 +37,7 @@ URLs you can visit:
 NASA International Space Apps Challenge page: http://spaceappschallenge.org/project/angryplanets/
 
 Source Code: https://github.com/cl-/AngryPlanets	
-(Has the Offline Local version of the game - for the best gameplay experience, use the Offline Local version's "index.html" file. There are some unresolved issues in the online version. Sorry about that, we're having our exams now so we don't have enough time to fix those issues.)
+(You can find the Offline Local version of the game there.)
 
 The Game Intro Scene: https://www.dropbox.com/s/c5xtayse9lvelhb/PRESENTATION_VIDEO%20-%20universe%20-%20Broadband.m4v	
 (It's somewhat big and will take a while to download, so we didn't really bundle it into the online version of the game.)
@@ -45,23 +45,24 @@ The Game Intro Scene: https://www.dropbox.com/s/c5xtayse9lvelhb/PRESENTATION_VID
 Online Game: http://angry-planets.appspot.com	
 (Please note: If a lot of people play the game, we may run out of free server time and the url may not load. Please let us know if it happens, and we'll try to get it up and running again as soon as we can.)
 
+NOTE #1: Please use Safari browser to play the game. The game will break on other browsers. Sorry about that, we're having our exams now so we don't have enough time to fix those issues, since it already runs perfectly on one browser at this time.
 
-NOTE #1: It may take some time to load on the first time you play the game because the videos will take some time to download.	
+NOTE #2: It may take some time to load on the first time you play the game because the videos will take some time to download.		
 So please try to have a good Internet connection for the best possible experience :)
 
-NOTE #2: If you experience any lag issues on the Online Version after a few playthroughs, simply refresh the page.	
-We're having our exams now so we don't have enough time to thoroughly test the game for stability. Sorry about that.
+NOTE #3: If you experience any lag issues on the Online Version after a few playthroughs, simply refresh the page to fix it.
+
+Note #4: To play the Offline Local version of the game, simply open its "index.html" file.	
+Do remember to use Safari browser.	
+When you run the code offline, it doesn't work well with some versions of Chrome.
 
 
 What we used:
 ---------------
 - HTML5
 - Javascript with Fabric
-- Safari browser
+- Safari browser (the Online Game works with Safari browser ONLY!)
 - AppEngine
-
-NOTE #3: If you are running the code locally, please run it on Safari browser.	
-When you run the code offline, it doesn't work well with some versions of Chrome.
 
 Further technical details can be found on the code page: https://github.com/cl-/AngryPlanets
 
