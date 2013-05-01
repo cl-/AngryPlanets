@@ -37,7 +37,7 @@ URLs you can visit:
 NASA International Space Apps Challenge page: http://spaceappschallenge.org/project/angryplanets/
 
 Source Code: https://github.com/cl-/AngryPlanets	
-(You can find the Offline Local version of the game there.)
+(You can find the Offline Local version of the game there. It is an older version, before we refactored and shifted things online, to make it possible for anyone to easily create a new game with a new solar system of their own customization.)
 
 The Game Intro Scene: https://www.dropbox.com/s/c5xtayse9lvelhb/PRESENTATION_VIDEO%20-%20universe%20-%20Broadband.m4v	
 (It's somewhat big and will take a while to download, so we didn't really bundle it into the online version of the game.)
@@ -67,7 +67,7 @@ What we used:
 - HTML5
 - Javascript with Fabric
 - Safari browser (the Online Game works with Safari browser ONLY!)
-- AppEngine to host our Online Version of the Game
+- AppEngine to host the Online Version of the Game
 
 Further technical details can be found on the code page: https://github.com/cl-/AngryPlanets
 
@@ -76,15 +76,15 @@ The API - How to customize the solar system game data:
 ---------------
 If you are a scientist or teacher trying to customize the game, here's how you can do it.
 
-- For the Online Version:	
+For the Online Version:		
 1. Create your custom json file according to the JSON Format specified below.		
-2. Upload your json file onto your own server or host.
+2. Upload your json file onto your own server or host.	
 3. Use the following URL Extension Method specified below.
 
-- For the Offline Local Version:	
+For the Offline Local Version:	
 This is an older version of our code, before we did the refactoring.	
-Try to avoid using it. You should use and customize the Online Version.
-If you really want to customize it, edit the main.js file.
+Try to avoid using it. You should use and customize the Online Version.		
+If you still really want to customize it, edit the main.js file (in the Repository).
 
 
 URL Extension Method (to load your custom Json file)
@@ -97,7 +97,7 @@ Example2: http://angry-planets.appspot.com/?load=http://dropbox.com/someDropboxS
 
 JSON Format
 ---------------
-An example of the JSON Format can be found in the default.json file.	
+An example of the JSON Format can be found in the default.json file (in the Repository).	
 It is pasted below for your convenience but the one below has no indentation. So please use the proper one in the default.json file.	
 NOTE: Please note that the "image" in your custom Json file should be the FULL URL PATH of the image.
 
@@ -116,8 +116,7 @@ loadGame({//An array of planets, in ascending order of mass; planet with the sma
 })
 
 
-Short Overview for Global Judging Nomination	
-for the NASA International Space Apps Challenge
+Short Overview for Global Judging Nomination for NASA International Space Apps Challenge
 ---------------
 What is Gravity?
 
