@@ -6,15 +6,6 @@ Description:
 ---------------
 What is Gravity?
 
-Unlike an expert scientist, a lay person often only knows that it's related to Newton's falling apple. It's really hard for them to imagine what gravity looks like, and understand what it truly is.
-
-So we made a visual game to help children "see" and understand gravity, and learn about planets and their moons at the same time! By showing the gravitational phenomena and the explanations.
-
-We also make it possible for scientists to easily create new stages to teach new content.
-
-
-What is Gravity?
-
 Gravity is something that we can't see or touch, but we feel its effects every day.
 
 To an expert scientist, Gravity is a force that is represented in figures in huge data sets of graphs and charts.
