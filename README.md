@@ -90,7 +90,7 @@ If you still really want to customize it, edit the main.js file (in the Reposito
 URL Extension Method (to load your custom Json file)
 ---------------
 The extension is simply taking our base URL (http://angry-planets.appspot.com/) and adding "?load=" followed by the full url path of your json file.	
-FORMAT: http://angry-planets.appspot.com/?load=your-json-file-FULL-path-and-filename	
+FORMAT: http://angry-planets.appspot.com/?load=INSERT_YOUR_JSON_FULL_URL_PATH_HERE		
 Example1: http://angry-planets.appspot.com/?load=http://mydomainname.com/birthdayPresent.json	
 Example2: http://angry-planets.appspot.com/?load=http://dropbox.com/someDropboxString/anotherGalaxy.json
 
