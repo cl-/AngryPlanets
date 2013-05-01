@@ -27,7 +27,7 @@ The game allows children to see what exactly happens and how planets and bodies 
 
 On top of showing the gravitational phenomenon that happens as a result of the planet chosen, the game also provides the explanation behind the phenomenon.
 
-Our second goal is to allow scientists to easily teach new content, by making it easy for them to create new stages for new planets and revolving bodies through simply submitting a json file.
+Our second goal is to allow scientists to easily teach new content, by making it easy for them to create new stages for new planets and revolving bodies through simply submitting a simple json file.
 
 To submit your customized json file to create new stages, it is easily done via a URL-extension to our original URL (the method is mentioned below). In that json file, you simply need to provide the list of planet names, planet images, moon counts, and planet masses in the specified json format detailed below.
 
@@ -44,6 +44,11 @@ The Game Intro Scene: https://www.dropbox.com/s/c5xtayse9lvelhb/PRESENTATION_VID
 
 Online Game: http://angry-planets.appspot.com	
 (Please note: If a lot of people play the game, we may run out of free server time and the url may not load. Please let us know if it happens, and we'll try to get it up and running again as soon as we can.)
+
+
+IMPORTANT NOTES:
+---------------
+Please read before playing the game!
 
 NOTE #1: Please use Safari browser to play the game. The game will break on other browsers. Sorry about that, we're having our exams now so we don't have enough time to fix those issues, since it already runs perfectly on one browser at this time.
 
@@ -62,16 +67,29 @@ What we used:
 - HTML5
 - Javascript with Fabric
 - Safari browser (the Online Game works with Safari browser ONLY!)
-- AppEngine
+- AppEngine to host our Online Version of the Game
 
 Further technical details can be found on the code page: https://github.com/cl-/AngryPlanets
 
 
+How to customize the solar system game data:
+---------------
+If you are a scientist or teacher trying to customize the game, here's how you can do it.
+
+- For the Online Version:	
+1. Create your custom json file according to the JSON Format specified below.		
+2. Upload your json file onto your own server or host.
+3. Use the following URL Extension Method specified below.
+
+- For the Offline Local Version:	
+This is an older version of our code, before we did the refactoring.	
+Try to avoid using it. You should use and customize the Online Version.
+If you really want to customize it, edit the main.js file.
+
+
 URL Extension Method (to load your custom Json file)
 ---------------
-1. Create the json file as per the Json Format detailed below.
-2. Upload your json file onto your own server or host.
-3. Use the following URL format:	
+The extension is simply taking our base URL (http://angry-planets.appspot.com/) and adding "?load=" followed by the full url path of your json file.	
 FORMAT: http://angry-planets.appspot.com/?load=your-json-file-FULL-path-and-filename	
 Example1: http://angry-planets.appspot.com/?load=http://mydomainname.com/birthdayPresent.json	
 Example2: http://angry-planets.appspot.com/?load=http://dropbox.com/someDropboxString/anotherGalaxy.json
@@ -79,7 +97,7 @@ Example2: http://angry-planets.appspot.com/?load=http://dropbox.com/someDropboxS
 
 JSON Format
 ---------------
-The JSON Format can be found in the default.json file.	
+An example of the JSON Format can be found in the default.json file.	
 It is pasted below for your convenience but the one below has no indentation. So please use the proper one in the default.json file.	
 NOTE: Please note that the "image" in your custom Json file should be the FULL URL PATH of the image.
 
