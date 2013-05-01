@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Angry Planets</title>
+	<style>
+	.canvas-container {
+	}
+	body {
+		background: black url(img/background_space.jpg) repeat;
+		margin: 0 auto;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<canvas id="c" width="1024" height="768"></canvas>
+		<video id="explosionVideo" width="420" style="left:0; top:0; position: absolute;" preload>
+			<source src="media/NasaSuperNova.m4v" type="video/mp4"></source>
+		</video>
+		<video id="sunVideo" width="320" style="left:0; top:0; position: absolute;" preload>
+			<source src="media/Sun1.m4v" type="video/mp4"></source>
+		</video>
+		<audio id="explosionSound" src="media/explode.wav" preload></audio>
+
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/all.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</div>
+</body>
+</html>

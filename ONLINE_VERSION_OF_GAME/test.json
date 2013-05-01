@@ -1,0 +1,10 @@
+loadGame({
+	"planets": [
+	{ "name": "Earth", "image": "img/earth.png", "moons": 1 },
+	{ "name": "Uranus", "image": "img/p_uranus.png", "moons": 5 },
+	{ "name": "Neptune", "image": "img/p_neptune.png", "moons": 13 },
+	{ "name": "Saturn", "image": "img/p_saturn.png", "moons": 62 },
+	{ "name": "Jupiter", "image": "img/p_jupiter.png", "moons": 4 }
+	],
+	"instructions":"Drag the right planet to the center."
+})

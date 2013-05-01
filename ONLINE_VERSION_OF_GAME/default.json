@@ -1,0 +1,13 @@
+loadGame({//An array of planets, in ascending order of mass; planet with the smallest mass first.
+	"planets": [
+	{ "name": "Mercury", "image": "img/p_mercury.png", "moons": 0, "mass":"3.3022 x 10^23 kg"},
+	{ "name": "Mars", "image": "img/p_mars.png", "moons": 2, "mass":"6.4185 x 10^23 kg" },
+	{ "name": "Venus", "image": "img/p_venus.png", "moons": 0, "mass":"4.8685 x 10^24 kg" },
+	{ "name": "Earth", "image": "img/earth.png", "moons": 1, "mass":"5.9736 x 10^24 kg" },
+	{ "name": "Uranus", "image": "img/p_uranus.png", "moons": 5, "mass":"8.6810 x 10^25 kg" },
+	{ "name": "Neptune", "image": "img/p_neptune.png", "moons": 13, "mass":"10.243 x 10^25 kg" },
+	{ "name": "Saturn", "image": "img/p_saturn.png", "moons": 62, "mass":"5.6846 x 10^26 kg" },
+	{ "name": "Jupiter", "image": "img/p_jupiter.png", "moons": 4, "mass":"1.8986 x 10^27 kg" }
+	],
+	"instructions": "Drag and drop the correct planet into the center."
+})
